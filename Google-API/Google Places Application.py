@@ -16,10 +16,10 @@ def get_info(place):
     params = {'input': f'{place}',
           'inputtype': 'textquery',
           'fields': 'place_id,photos,formatted_address,name,rating,opening_hours,geometry',
-          'key': 'AIzaSyAtzvDoPkWFu8g6urdrhaManQq-zccP9RM',
+          'key': 'YOUR API KEY',
           'photoreference':'CmRaAAAAK9eay-SzysPwoyqs2MC113XeQmdMvxXXaJSND8TwSbhwRFUgN5x5E4hkvtJTQ75uPWQQ8IgqGu9N5-78T8Vms5M_O2xk_CyWnXm3eSg-1tDeSINvfTvDuDkVkqgsphf9EhAyoyHyOnG0qqm8TQOrOCOfGhTNnECx7B_1RUv16V3qDuv9MnfxKw'
          }
-    photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=640&maxheight=480&photoreference={}&key=AIzaSyAtzvDoPkWFu8g6urdrhaManQq-zccP9RM"
+    photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=640&maxheight=480&photoreference={}&key=YOUR API KEY"
     
     info_response = rq.get(url,params=params)
     if info_response.headers['Content-type']=='application/json; charset=UTF-8':
